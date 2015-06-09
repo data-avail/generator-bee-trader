@@ -1,0 +1,15 @@
+{
+  "name": "<%= props.appName %>",
+  "version": "0.1.0",
+  "dependencies": {
+    <% if (props.isTraderNet) { %>"trader-net": "git://github.com/data-avail/trader-net.git",<% } %>
+    <% if (props.handler == 'create_mongo') { %>"mongojs": "~1.0.0-beta4",<% } %>
+    "da-helpers": "git://github.com/data-avail/da-helpers.git",
+    "bluebird": "~2.9.25"
+  },
+  "repository": "https://github.com/<%= props.userName %>/bee-trader-<%= props.appName %>",
+  "author": {
+    "name": "<%= props.userName %>",
+    "url": "https://github.com/<%= props.userName %>"
+  }
+}
