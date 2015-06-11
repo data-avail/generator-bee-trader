@@ -11,16 +11,10 @@ var mongoCollection = process.env.MONGO_HANDLER_COLLECTION;
 
 var db = mongojs(mongoUrl, [mongoCollection]);
 var coll : any = Promise.promisifyAll(db[mongoCollection]);
-var findAsync : <T>(query: any) => Promise<T[]> = Promise.promisify(coll.find, coll)
-
-interface IPosition {
-  _id: string
-  ticker: string
-}
+var findAsync : <T>(query: any) => Promise<T[]> = Promise.promisify(coll.find, coll);
 <% } %>
 
 export function handle (log: logger.ILogger, cmd) {
   log.write({oper: "handle", status: "start", cmd: cmd})
 }
 
-exports.handle = handle;

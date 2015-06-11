@@ -94,6 +94,11 @@ module.exports = yeoman.generators.Base.extend({
       );
 
       this.fs.copy(
+        this.templatePath('bluebird.d.ts'),
+        this.destinationPath('typings/bluebird/bluebird.d.ts')
+      );
+
+      this.fs.copy(
         this.templatePath('tmpl.env'),
         this.destinationPath('.envs/_tmpl.env')
       );

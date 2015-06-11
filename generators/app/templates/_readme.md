@@ -25,10 +25,10 @@ tsc -p src
 ```  
 
 + Define enviroment variables (examp .envs/_tmpl.env file)
-+ Load env variables to enviroment, could use `source`
++ Load env variables into enviroment, could use `source`
 + Test start `npm start` 
 
 ## Docker 
 
-+ Build container `docker build -t <%= props.userName %>/bee-trader--<%= props.appName %> .`
-+ Start container `docker run --env-file=".envs/xxx.env" <%= props.userName %>/bee-trader--<%= props.appName %>`
++ Build container `docker build -t <%= props.userName %>/bee-trader-<%= props.appName %> .`
++ Start container `docker run --env-file=".envs/xxx.env" <%= props.userName %>/bee-trader-<%= props.appName %>`
